@@ -1,7 +1,7 @@
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install wget -y
-mkdir $HOME/subspace; \
-cd $HOME/subspace && \
+mkdir $HOME/subspace
+cd $HOME/subspace
 wget https://github.com/subspace/subspace/releases/download/snapshot-2022-mar-09/subspace-farmer-ubuntu-x86_64-snapshot-2022-mar-09 -O farmer
 wget https://github.com/subspace/subspace/releases/download/snapshot-2022-mar-09/subspace-node-ubuntu-x86_64-snapshot-2022-mar-09 -O subspace
 sudo chmod +x *
@@ -9,8 +9,8 @@ sudo mv * /usr/local/bin/
 cd $HOME
 rm -Rvf $HOME/subspace
 farmer --version && subspace --version
-echo "export NICKNAME="paparim"" >> ~/.bash_profile
-echo "export SUBSPACE_ADDRESS="5F6pxM2LUgAuZw6XfFMFtDtu3JpU7Y5yHJfQCFbXhUxdZBdV"" >> ~/.bash_profile
+echo "export NICKNAME="Paparim"" >> ~/.bash_profile
+echo "export SUBSPACE_ADDRESS="stAJBfnK77zptixJZ4oG6MWfuwd5CwVtQAuXbMCYWjeUvJdNV"" >> ~/.bash_profile
 source ~/.bash_profile
 echo "моникер: '$NICKNAME', кошелёк: '$SUBSPACE_ADDRESS'."
 
@@ -50,7 +50,6 @@ EOF
 sudo systemctl daemon-reload 
 sudo systemctl enable subspaced
 sudo systemctl restart subspaced
-sudo systemctl status subspaced
 
 sudo tee <<EOF >/dev/null /etc/systemd/system/farmerd.service
 [Unit]
@@ -72,3 +71,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable farmerd
 sudo systemctl restart farmerd
 sudo systemctl status farmerd
+sudo systemctl status subspaced
