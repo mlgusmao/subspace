@@ -9,8 +9,8 @@ sudo mv * /usr/local/bin/
 cd $HOME
 rm -Rvf $HOME/subspace
 farmer --version && subspace --version
-echo "export NICKNAME="Paparim"" >> ~/.bash_profile
-echo "export SUBSPACE_ADDRESS="stAJBfnK77zptixJZ4oG6MWfuwd5CwVtQAuXbMCYWjeUvJdNV"" >> ~/.bash_profile
+echo "export NICKNAME="glotok"" >> ~/.bash_profile
+echo "export SUBSPACE_ADDRESS="stBS4xZgc9gqFEC6eeQHCjzEWF64SuFv2ZVkPPR8KeTjjpeH3"" >> ~/.bash_profile
 source ~/.bash_profile
 echo "моникер: '$NICKNAME', кошелёк: '$SUBSPACE_ADDRESS'."
 
